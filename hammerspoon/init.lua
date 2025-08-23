@@ -25,9 +25,18 @@ end
 -- Automatically tile Stata windows to the noice configuration.
 
 function stataWatcher(appName, eventType, appObject)
-    if (eventType == hs.application.watcher.activated) and (appName == "StataNow/MP 19.5") then
-        appObject:selectMenuItem({"Window", "Fill"})
+    if (eventType == hs.application.watcher.launched) then
+        if (appName == "StataNow/MP 19.5") then
+            appObject:selectMenuItem({"Window", "Move & Resize", "Top Left"})
 
+            --eventtap.keyStrokes("help help_adviser") -- keystroke for viewer
+            --eventtap.keyStroke({}, "return")
+            eventtap.keyStroke({"cmd"}, "7")
+            appObject:selectMenuItem({"Window", "Move & Resize", "Bottom Left"})
+
+            eventtap.keyStroke({"cmd"}, "9") -- keystroke for do-file editor
+            --appObject:selectMenuItem({"Window", "Move & Resize", "Right"})
+        end
     end
 end
 

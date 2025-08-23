@@ -1,1 +1,3 @@
-cp -R ~/.hammerspoon ./hammerspoon # bring the hammerspoon files over
+# bring the hammerspoon files over
+rm -rf ./hammerspoon
+cp -R ~/.hammerspoon ./hammerspoon
