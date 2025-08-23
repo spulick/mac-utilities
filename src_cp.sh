@@ -1,0 +1,1 @@
+cp -R ~/.hammerspoon ./hammerspoon # bring the hammerspoon files over
