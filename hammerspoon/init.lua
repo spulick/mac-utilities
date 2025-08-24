@@ -6,8 +6,8 @@ local eventtap = require("hs.eventtap")
 local image = require("hs.image")
 local events = eventtap.event.types
 
-local left_cat = image.imageFromPath("./Assets/left.png"):setSize({w = 40, h = 40})
-local right_cat = image.imageFromPath("./Assets/right.png"):setSize({w = 40, h = 40})
+local left_cat = image.imageFromPath("./Assets/MeensiecatL.png"):setSize({w = 40, h = 40})
+local right_cat = image.imageFromPath("./Assets/MeensiecatR.png"):setSize({w = 40, h = 40})
 
 if bongocat then
     hs.eventtap.new({ events.keyUp }, function()
